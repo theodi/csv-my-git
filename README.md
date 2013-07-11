@@ -11,7 +11,7 @@ Installation
 Just drop this into a terminal:
 
 ```
-curl -L http://theodi.github.io/csv-my-git | bash
+curl -L http://theodi.github.io/csv-my-git/install.sh | bash
 ```
 
-You can check what it will do beforehand by looking at index.html in this repository.
+You can check what it will do beforehand by looking at install.sh in this repository.
