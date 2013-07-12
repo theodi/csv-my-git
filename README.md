@@ -1,7 +1,7 @@
 csv-my-git
 ==========
 
-Add csv diff capabilities to your local git configuration.
+Add csv diff capabilities to your local git configuration (on unix-style platforms like OSX or Linux).
 
 Once installed, you'll get decent results diffing CSV files when you use `git diff --word-diff file.csv`.
 
