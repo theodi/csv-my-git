@@ -8,10 +8,32 @@ Once installed, you'll get decent results diffing CSV files when you use `git di
 Installation
 ------------
 
-Just drop this into a terminal:
+Just pop this into a terminal:
 
 ```
 curl -L http://theodi.github.io/csv-my-git/install.sh | bash
 ```
 
-You can check what it will do beforehand by looking at install.sh in this repository.
+You can now diff CSVs nicely using `git diff --word-diff`.
+
+What's going on?
+----------------
+
+The script will drop the following into your ~/.config/git/attributes file:
+
+```
+*.csv	diff=csv
+```
+
+and the following into your ~/.gitconfig
+
+```
+[color]
+	ui = true
+[diff "csv"]
+	wordRegex = [^,\n]+[,\n]|[,]
+```
+
+It shouldn't affect anything that's already there, unless you already have a CSV line in your gitattributes.
+
+You can verify this behaviour by looking at the source for [install.sh](https://github.com/theodi/csv-my-git/blob/gh-pages/install.sh).
