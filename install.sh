@@ -3,6 +3,7 @@
 # Global git configuration
 git config --global color.ui true
 git config --global diff.csv.wordRegex $'[^,\n]+[,\n]|[,]'
+git config --global alias.diffcsv "diff --word-diff"
 
 # Setup CSV diff in gitattributes
 ATTR_FILE_DIR="${HOME}/.config/git"
