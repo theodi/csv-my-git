@@ -6,7 +6,7 @@ git config --global diff.csv.wordRegex $'[^,\n]+[,\n]|[,]'
 git config --global alias.diffcsv "diff --word-diff"
 
 # Setup CSV diff in gitattributes
-ATTR_FILE_DIR="${HOME}/.config/git"
+ATTR_FILE_DIR="${XDG_CONFIG_HOME:-${HOME}/.config}/git"
 ATTR_FILE="${ATTR_FILE_DIR}/attributes"
 # Make sure attribute file and directory exist
 mkdir -p ${ATTR_FILE_DIR}
